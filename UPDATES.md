@@ -25,3 +25,9 @@ Fail utama: [index.html](index.html) · [README.md](README.md)
 - Menambah pautan WhatsApp terus ke **+6011-58769834** dengan mesej permintaan sebut harga.
 - Menambah rujukan kadar awam daripada Achik Print4U, Monash University Malaysia dan ACCEA Malaysia.
 - Menyimpan versi sebelum perubahan pada branch `snapshot/2026-11-11-before-pricing-whatsapp`.
+
+## 11 November 2026 — Alamat kedai
+
+- Menambah alamat **Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin** pada kad maklumat kedai di laman utama.
+- Mengemas kini dokumentasi perniagaan dalam `README.md`.
+- Menyimpan versi sebelum alamat ditambah pada branch `snapshot/2026-11-11-before-address`.
