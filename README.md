@@ -3,8 +3,8 @@
 Laman web satu halaman yang responsif untuk GitHub Pages. Kandungan menggunakan Bahasa Melayu dan fail HTML/CSS/JavaScript biasa — tiada framework atau proses build diperlukan.
 
 ## Pautan
-- Repositori: https://github.com/uzieyfamily/welcome
-- Laman web: https://uzieyfamily.github.io/welcome/
+- Repositori: https://github.com/uzieyfamily/uzieyfamily.github.io
+- Laman web utama: https://uzieyfamily.github.io/
 - Rekod perubahan: [UPDATES.md](UPDATES.md)
 
 ## Maklumat kedai
@@ -22,6 +22,5 @@ Rujukan:
 - https://www.accea.com.my/ms/copy_p/copy_p_color.php
 
 ## Terbitkan dengan GitHub Pages
-Dalam Settings → Pages, pilih Deploy from a branch, branch `main`, folder `/(root)`, kemudian Save.
+Dalam Settings → Pages, pilih Deploy from a branch, branch `main`, folder `/(root)`, kemudian Save. Fail `index.html` mesti berada di direktori utama repositori.
 
-Versi sebelum perubahan sebut harga dan WhatsApp disimpan pada branch `snapshot/2026-11-11-before-pricing-whatsapp`.
