@@ -1,26 +1,42 @@
 # Kedai Print dan Fotostat Uziey Family
 
-Laman web satu halaman yang responsif untuk GitHub Pages. Kandungan menggunakan Bahasa Melayu dan fail HTML/CSS/JavaScript biasa — tiada framework atau proses build diperlukan.
+Laman GitHub Pages ini diselaraskan dengan kandungan dan susunan halaman awam WordPress Uziey Family.
 
-## Pautan
+## Laman web
+- Utama: https://uzieyfamily.github.io/
 - Repositori: https://github.com/uzieyfamily/uzieyfamily.github.io
-- Laman web utama: https://uzieyfamily.github.io/
-- Rekod perubahan: [UPDATES.md](UPDATES.md)
+- Laman WordPress rujukan: https://uzieyfamily.wordpress.com/
+
+## Halaman
+- Utama
+- Perkhidmatan
+- Cara Urusan
+- Hubungi
+- Tempahan / Permohonan Sebut Harga
+- Updates / Kemas Kini
+- Tentang Uziey Family
+- Dasar Privasi
+- Terma Perkhidmatan
 
 ## Maklumat kedai
 - Telefon / WhatsApp: **+6011-58769834**
-- Waktu operasi: Isnin hingga Sabtu, 9.00 pagi–6.00 petang.
-- Ahad dan cuti umum: Tutup.
-- Alamat: **Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin**.
+- Alamat: **Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin, Negeri Sembilan**
+- Waktu operasi: **Isnin hingga Sabtu, 9.00 pagi–6.00 petang**
+- Ahad dan cuti umum: **Tutup**
+- Pembayaran: **Cash Only – bayaran tunai sahaja. Cashless / QR Code tidak tersedia buat masa ini.**
 
-## Anggaran sebut harga 2026/2027
-Laman memaparkan julat harga rujukan awal bagi fotostat dan cetakan A4/A3. Julat tersebut ialah anggaran berdasarkan kadar awam yang diterbitkan oleh penyedia percetakan dan institusi pendidikan di Malaysia. Ia **bukan harga rasmi Uziey Family** dan perlu disahkan terus dengan kedai sebelum pesanan.
+## Tempahan dan sebut harga
+- Google Form: https://forms.gle/PGTpLLaTfLuwuDgT9
+- WhatsApp: https://wa.me/601158769834
 
-Rujukan:
-- https://achikprint4u.com.my/services/photocopy
-- https://www.monash.edu.my/its/our-services/staff/printing-services
-- https://www.accea.com.my/ms/copy_p/copy_p_color.php
+## Nota harga
+Julat harga cetakan/fotostat 2026/2027 yang dipaparkan ialah anggaran rujukan, bukan senarai harga rasmi Uziey Family. Pelanggan perlu mendapatkan pengesahan harga daripada kedai.
 
-## Terbitkan dengan GitHub Pages
-Dalam Settings → Pages, pilih Deploy from a branch, branch `main`, folder `/(root)`, kemudian Save. Fail `index.html` mesti berada di direktori utama repositori.
+## Penerbitan GitHub Pages
+Dalam Settings → Pages, pilih Deploy from a branch, branch `main`, folder `/(root)`. Fail `index.html` berada pada root repositori.
 
+## Snapshot
+Versi sebelum penyelarasan WordPress disimpan pada branch:
+`snapshot/2026-11-11-before-wordpress-sync`
+
+Rujuk [SNAPSHOT-LOCK.md](SNAPSHOT-LOCK.md) untuk butiran snapshot dan status perlindungan branch.
