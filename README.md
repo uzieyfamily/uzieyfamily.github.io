@@ -11,7 +11,7 @@ Laman web satu halaman yang responsif untuk GitHub Pages. Kandungan menggunakan 
 - Telefon / WhatsApp: **+6011-58769834**
 - Waktu operasi: Isnin hingga Sabtu, 9.00 pagi–6.00 petang.
 - Ahad dan cuti umum: Tutup.
-- Alamat: belum diberikan.
+- Alamat: **Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin**.
 
 ## Anggaran sebut harga 2026/2027
 Laman memaparkan julat harga rujukan awal bagi fotostat dan cetakan A4/A3. Julat tersebut ialah anggaran berdasarkan kadar awam yang diterbitkan oleh penyedia percetakan dan institusi pendidikan di Malaysia. Ia **bukan harga rasmi Uziey Family** dan perlu disahkan terus dengan kedai sebelum pesanan.
