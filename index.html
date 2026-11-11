@@ -353,7 +353,7 @@
       const url = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent("Salam, saya ingin bertanya tentang perkhidmatan print dan fotostat Uziey Family.")}`;
       document.getElementById("whatsapp-link").href = url;
       const quoteLink = document.getElementById("whatsapp-price-link");
-      if (quoteLink) quoteLink.href = url + "?text=" + encodeURIComponent("Salam Uziey Family, saya ingin minta sebut harga untuk perkhidmatan print / fotostat.");
+      if (quoteLink) quoteLink.href = "https://wa.me/" + STORE.whatsapp + "?text=" + encodeURIComponent("Salam Uziey Family, saya ingin minta sebut harga untuk perkhidmatan print / fotostat.");
       document.getElementById("whatsapp-cta").hidden = false;
     }
 
