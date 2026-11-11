@@ -18,3 +18,12 @@ Untuk menguatkuasakan lock pada GitHub:
 4. Jangan benarkan direct pushes; gunakan ruleset/branch protection yang sesuai dengan polisi akaun.
 
 Untuk melindungi laman aktif, sasarkan juga branch `main` dan aktifkan Require a pull request before merging serta Restrict deletions dan Block force pushes. Semak sama ada akaun pemilik boleh memintas peraturan sebelum menganggap lock berkuat kuasa.
+
+## Snapshot sebelum pop-up amaran (11 November 2026)
+- Branch: `snapshot/2026-11-11-before-cash-only-popup`
+- Commit asas: `33f055a031ccc23da5d09a414bc40ec3c84d7000`
+- URL: https://github.com/uzieyfamily/uzieyfamily.github.io/tree/snapshot/2026-11-11-before-cash-only-popup
+
+Branch ini diwujudkan sebelum pop-up CASH ONLY dan QR Code ditambah. Ia merupakan salinan rujukan berasingan daripada branch `main`.
+
+Status perlindungan GitHub: branch protection masih perlu diaktifkan melalui GitHub Settings → Branches / Rulesets. Semakan semasa sebelum ini menunjukkan `protected: false`; catatan ini tidak bermaksud GitHub telah menguatkuasakan lock.
