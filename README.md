@@ -32,6 +32,15 @@ Laman GitHub Pages ini diselaraskan dengan kandungan dan susunan halaman awam Wo
 ## Nota harga
 Julat harga cetakan/fotostat 2026/2027 yang dipaparkan ialah anggaran rujukan, bukan senarai harga rasmi Uziey Family. Pelanggan perlu mendapatkan pengesahan harga daripada kedai.
 
+## Pop-up keselamatan
+- Pop-up CASH ONLY dan amaran hack/penipuan QR Code dipaparkan secara automatik pada lawatan pertama setiap sesi pelayar.
+- Pengunjung boleh membuka semula pop-up melalui butang di footer setiap halaman.
+- Notis pembayaran dan keselamatan turut kekal dipaparkan pada halaman utama dan footer.
+
+## Polisi laman
+- Dasar Privasi: https://uzieyfamily.github.io/privacy-policy/
+- Terma Perkhidmatan: https://uzieyfamily.github.io/terms-of-service/
+
 ## Penerbitan GitHub Pages
 Dalam Settings → Pages, pilih Deploy from a branch, branch `main`, folder `/(root)`. Fail `index.html` berada pada root repositori.
 
