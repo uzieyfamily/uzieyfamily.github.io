@@ -24,3 +24,12 @@ Fail utama: [index.html](index.html), [assets/site.css](assets/site.css), [asset
 - Menambah maklumat telefon, alamat dan waktu operasi kedai.
 - Menambah anggaran sebut harga 2026/2027 serta pautan WhatsApp.
 
+
+## 11 November 2026 — Pop-up CASH ONLY dan keselamatan QR Code
+
+- Menambah pop-up CASH ONLY dan amaran hack/penipuan QR Code yang dipaparkan secara automatik pada lawatan pertama setiap sesi pelayar.
+- Menambah butang untuk membuka semula pop-up CASH ONLY dan amaran QR Code pada footer setiap halaman.
+- Menambah butang untuk membuka semula pop-up daripada notis utama.
+- Mengekalkan notis statik pada halaman utama dan footer sebagai peringatan tambahan.
+- Memperjelas pautan Dasar Privasi (Privacy Policy) dan Terma Perkhidmatan (Terms of Service) pada footer.
+- Menyimpan versi sebelum perubahan pada branch `snapshot/2026-11-11-before-cash-only-popup`.
