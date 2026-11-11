@@ -3,377 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#16233b">
-  <meta name="description" content="Kedai Print dan Fotostat Uziey Family — perkhidmatan cetakan dan fotostat dokumen.">
-  <title>Kedai Print dan Fotostat Uziey Family</title>
-  <style>
-    :root {
-      --navy: #16233b;
-      --navy-2: #223653;
-      --cream: #fffaf0;
-      --paper: #ffffff;
-      --ink: #1c2b42;
-      --muted: #64748b;
-      --orange: #ffb15c;
-      --coral: #f07860;
-      --line: #e9e4da;
-      --shadow: 0 22px 60px rgba(24, 37, 58, .12);
-      --radius: 24px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar { background: var(--navy); color: #e9edf5; font-size: .86rem; }
-    .topbar-inner { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .topbar strong { color: var(--orange); font-weight: 700; }
-    header { position: relative; z-index: 2; background: rgba(255,250,240,.94); border-bottom: 1px solid rgba(22,35,59,.08); }
-    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 82px; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 850; letter-spacing: -.035em; line-height: 1.08; }
-    .brand-mark { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 15px; background: var(--navy); color: var(--orange); font-size: 1.35rem; box-shadow: 0 7px 16px rgba(22,35,59,.18); }
-    .brand small { display: block; margin-top: 5px; color: var(--muted); font-size: .68rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
-    .navlinks { display: flex; align-items: center; gap: 28px; color: #475569; font-size: .94rem; font-weight: 650; }
-    .navlinks a:hover { color: var(--coral); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 999px; padding: 13px 20px; background: var(--coral); color: #fff; font-weight: 800; box-shadow: 0 10px 22px rgba(240,120,96,.24); transition: transform .2s ease, box-shadow .2s ease; cursor: pointer; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(240,120,96,.3); }
-    .btn-dark { background: var(--navy); box-shadow: none; }
-    .hero { position: relative; overflow: hidden; padding: 84px 0 96px; background: var(--navy); color: white; }
-    .hero::before, .hero::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; pointer-events: none; }
-    .hero::before { width: 600px; height: 600px; right: -170px; top: -300px; box-shadow: 0 0 0 45px rgba(255,255,255,.025), 0 0 0 95px rgba(255,255,255,.02); }
-    .hero::after { width: 360px; height: 360px; right: 13%; bottom: -275px; }
-    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 52px; position: relative; z-index: 1; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--orange); font-size: .78rem; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 27px; height: 2px; background: var(--orange); }
-    h1 { max-width: 690px; margin: 18px 0 20px; font-size: clamp(2.65rem, 5vw, 4.8rem); letter-spacing: -.065em; line-height: 1.04; }
-    h1 span { color: var(--orange); }
-    .hero-copy { max-width: 530px; color: #c8d2e1; font-size: 1.08rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,.28); color: white; box-shadow: none; }
-    .hero-note { margin-top: 22px; color: #9eacc1; font-size: .88rem; }
-    .visual { min-height: 385px; position: relative; display: grid; place-items: center; }
-    .paper-stack { width: min(390px, 100%); height: 340px; position: relative; }
-    .sheet { position: absolute; width: 250px; height: 310px; border-radius: 12px; background: #fffdf8; box-shadow: 0 26px 50px rgba(0,0,0,.25); }
-    .sheet.back { left: 42px; top: 18px; transform: rotate(-10deg); background: #f6c98f; }
-    .sheet.mid { left: 85px; top: 14px; transform: rotate(8deg); background: #e8edf4; }
-    .sheet.front { left: 65px; top: 28px; padding: 25px 23px; transform: rotate(-2deg); color: var(--navy); }
-    .sheet-logo { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: var(--navy); color: var(--orange); font-weight: 900; font-size: 1.2rem; }
-    .sheet-title { margin-top: 26px; font-weight: 900; font-size: 1.45rem; line-height: 1.05; letter-spacing: -.04em; }
-    .sheet-sub { margin-top: 8px; color: #64748b; font-size: .68rem; font-weight: 800; letter-spacing: .14em; }
-    .fake-lines { display: grid; gap: 9px; margin-top: 25px; }
-    .fake-lines i { display: block; height: 6px; border-radius: 5px; background: #e6e8ec; }
-    .fake-lines i:nth-child(2) { width: 82%; }
-    .fake-lines i:nth-child(3) { width: 94%; }
-    .fake-lines i:nth-child(4) { width: 63%; }
-    .stamp { position: absolute; right: 0; bottom: 30px; width: 105px; height: 105px; display: grid; place-items: center; text-align: center; padding: 12px; border-radius: 50%; background: var(--coral); color: white; font-size: .72rem; font-weight: 900; line-height: 1.25; letter-spacing: .08em; transform: rotate(10deg); box-shadow: 0 12px 25px rgba(0,0,0,.2); }
-    section { padding: 88px 0; }
-    .section-head { max-width: 650px; margin: 0 auto 42px; text-align: center; }
-    .section-kicker { color: var(--coral); font-size: .76rem; font-weight: 900; letter-spacing: .17em; text-transform: uppercase; }
-    h2 { margin: 10px 0 12px; color: var(--navy); font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.12; letter-spacing: -.05em; }
-    .section-head p { margin: 0; color: var(--muted); }
-    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .service-card { position: relative; overflow: hidden; min-height: 245px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: 0 8px 28px rgba(24,37,58,.04); }
-    .service-card::after { content: ""; position: absolute; width: 150px; height: 150px; right: -55px; bottom: -65px; border-radius: 50%; background: #fff1dd; }
-    .service-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 17px; background: #fff0df; font-size: 1.55rem; }
-    .service-card h3 { margin: 20px 0 8px; color: var(--navy); font-size: 1.28rem; letter-spacing: -.025em; }
-    .service-card p { max-width: 410px; margin: 0; color: var(--muted); }
-    .service-number { position: absolute; top: 28px; right: 30px; color: #d7dce5; font-size: .86rem; font-weight: 900; letter-spacing: .1em; }
-    .band { padding: 0 0 88px; }
-    .band-inner { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 40px; padding: 46px; border-radius: 30px; background: #f7ead8; }
-    .band-inner h2 { margin-top: 0; }
-    .band-inner p { color: #657184; margin-bottom: 0; }
-    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
-    .step { padding: 19px; border-radius: 18px; background: rgba(255,255,255,.75); }
-    .step b { display: block; margin-bottom: 6px; color: var(--coral); font-size: .76rem; letter-spacing: .12em; }
-    .step span { color: var(--navy); font-weight: 780; line-height: 1.3; }
-    .contact { padding: 82px 0; background: var(--navy); color: white; }
-    .contact-grid { display: grid; grid-template-columns: 1fr .8fr; align-items: center; gap: 52px; }
-    .contact h2 { color: white; }
-    .contact p { max-width: 560px; color: #bdc9da; }
-    .contact-panel { padding: 28px; border: 1px solid rgba(255,255,255,.13); border-radius: 22px; background: rgba(255,255,255,.06); }
-    .contact-panel h3 { margin: 0 0 10px; color: var(--orange); }
-    .contact-panel p { margin: 0; font-size: .93rem; }
-    .contact-details { display: grid; gap: 13px; margin-top: 19px; }
-    .detail { display: none; align-items: flex-start; gap: 10px; color: #e9edf5; font-size: .94rem; }
-    .detail.show { display: flex; }
-    .detail-icon { width: 27px; flex: 0 0 27px; }
-    .contact-cta { margin-top: 20px; }
-    .setup-hint { display: none; margin-top: 16px !important; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.13); color: #9eacc1 !important; font-size: .8rem !important; }
-    .setup-hint.show { display: block; }
-    footer { padding: 23px 0; background: #101a2c; color: #9eacc1; font-size: .84rem; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-    .footer-inner strong { color: white; }
-
-    .pricing { padding: 84px 0; background: #f7f9fc; }
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .price-card { padding: 25px; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 8px 28px rgba(24,37,58,.04); }
-    .price-card .price-label { color: var(--muted); font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-    .price-card h3 { margin: 12px 0 8px; color: var(--navy); font-size: 1.12rem; }
-    .price-card .price { color: var(--coral); font-size: 1.75rem; font-weight: 900; letter-spacing: -.04em; line-height: 1.2; }
-    .price-card .unit { margin-top: 6px; color: var(--muted); font-size: .83rem; }
-    .price-note { margin: 26px auto 0; max-width: 850px; padding: 20px 22px; border: 1px solid #f1d9bb; border-radius: 18px; background: #fff8ed; color: #596579; font-size: .91rem; }
-    .price-note strong { color: var(--navy); }
-    .price-sources { margin-top: 11px; font-size: .78rem; }
-    .price-sources a { color: #b95b48; text-decoration: underline; text-underline-offset: 3px; }
-    .price-action { margin-top: 22px; text-align: center; }
-    .price-action p { margin: 0 0 15px; color: var(--muted); }
-
-    @media (max-width: 800px) {
-      .nav { min-height: 72px; }
-      .navlinks { display: none; }
-      .hero { padding: 64px 0 70px; }
-      .hero-grid, .band-inner, .contact-grid { grid-template-columns: 1fr; }
-      .hero-grid { gap: 28px; }
-      .visual { min-height: 330px; }
-      .paper-stack { transform: scale(.9); transform-origin: center top; }
-      .services { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .band-inner { padding: 30px; }
-      .steps { grid-template-columns: 1fr; }
-      section { padding: 70px 0; }
-      .band { padding-bottom: 70px; }
-      .contact-grid { gap: 24px; }
-    }
-    @media (max-width: 480px) {
-      .wrap { width: min(100% - 28px, 1120px); }
-      .topbar-inner { justify-content: center; text-align: center; }
-      .topbar-inner span:last-child { display: none; }
-      .brand { font-size: .92rem; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .price-card { padding: 22px; }
-      .brand-mark { width: 40px; height: 40px; }
-      .nav > .btn { padding: 10px 13px; font-size: .82rem; }
-      h1 { font-size: 2.55rem; }
-      .hero-copy { font-size: 1rem; }
-      .hero-actions .btn { width: 100%; }
-      .visual { min-height: 285px; overflow: hidden; }
-      .paper-stack { transform: scale(.76); transform-origin: center top; }
-      .service-card { min-height: 220px; padding: 25px; }
-      .band-inner { padding: 25px 20px; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
-  </style>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Kedai Print dan Fotostat Uziey Family — perkhidmatan cetakan, fotostat, tempahan dan sebut harga di Mantin, Negeri Sembilan.">
+  <title>Kedai Print dan Fotostat | Kedai Print dan Fotostat Uziey Family</title>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-  <div class="topbar">
-    <div class="wrap topbar-inner">
-      <span><strong>UZIEY FAMILY</strong> · Print & Fotostat</span>
-      <span>Urusan dokumen anda, lebih mudah.</span>
+<a class="skip-link" href="#kandungan">Langkau ke kandungan utama</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Uziey Family — Utama">
+      <span class="brand-mark">U</span>
+      <span><span class="brand-name">Uziey Family</span><span class="brand-subtitle">Kedai Print dan Fotostat</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navigasi utama"><a href="/">Utama</a>
+<a href="/perkhidmatan/">Perkhidmatan</a>
+<a href="/cara-urusan/">Cara Urusan</a>
+<a href="/hubungi/">Hubungi</a>
+<a href="/tempahan-sebut-harga/">Tempahan / Sebut Harga</a>
+<a href="/updates/">Updates</a>
+<a href="/about/">Tentang</a></nav>
+    <details class="mobile-menu">
+      <summary>Menu ☰</summary>
+      <nav class="mobile-nav" aria-label="Navigasi mudah alih"><a href="/">Utama</a>
+<a href="/perkhidmatan/">Perkhidmatan</a>
+<a href="/cara-urusan/">Cara Urusan</a>
+<a href="/hubungi/">Hubungi</a>
+<a href="/tempahan-sebut-harga/">Tempahan / Sebut Harga</a>
+<a href="/updates/">Updates</a>
+<a href="/about/">Tentang</a></nav>
+    </details>
+  </div>
+</header>
+<main class="page-main" id="kandungan">
+<div class="container">
+  <section class="notice" aria-label="Notis pembayaran dan keselamatan">
+    <h2>⚠️ CASH ONLY – BAYARAN TUNAI SAHAJA</h2>
+    <p><strong>Bayaran tanpa tunai / Cashless melalui QR Code tidak dapat digunakan buat masa ini.</strong> Sila sediakan wang tunai untuk semua urusan pembayaran.</p>
+    <p><strong>AMARAN KESELAMATAN – AWAS PENIPUAN / HACK QR CODE.</strong> Jangan imbas QR Code yang tidak disahkan, jangan ikut pautan mencurigakan dan jangan buat pembayaran ke akaun yang tidak rasmi. Sahkan dahulu dengan pihak Uziey Family jika ragu-ragu.</p>
+  </section>
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div>
+        <div class="eyebrow">Print · Fotostat · Dokumen</div>
+        <h1>Dokumen anda,<br>kami bantu cetakkan.</h1>
+        <p class="lead">Selamat datang ke Kedai Print dan Fotostat Uziey Family. Kami menyediakan perkhidmatan cetakan dan fotostat untuk membantu urusan dokumen harian anda.</p>
+        <p>Untuk pertanyaan harga, nyatakan jenis dokumen dan jumlah salinan yang diperlukan.</p>
+        <div class="hero-actions">
+          <a class="button" href="/perkhidmatan/">Lihat perkhidmatan</a>
+          <a class="button button-outline" href="/hubungi/">Hubungi kami</a>
+          <a class="button button-light" href="/tempahan-sebut-harga/">Tempahan / Sebut Harga</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="eyebrow">Maklumat kedai</div>
+        <h2 style="margin-top:12px">Urusan dokumen anda, lebih mudah.</h2>
+        <p><strong>Telefon / WhatsApp</strong><br><a href="tel:+601158769834">+6011-58769834</a></p>
+        <p><strong>Alamat</strong><br>Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin.</p>
+        <p><strong>Waktu operasi</strong><br>Isnin hingga Sabtu. Ahad dan cuti umum: Tutup.</p>
+        <a class="button" href="https://wa.me/601158769834?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20perkhidmatan%20print%20dan%20fotostat%20Uziey%20Family." target="_blank" rel="noopener noreferrer">WhatsApp kami ↗</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Apa yang kami lakukan</div>
+    <h2 class="section-heading">Perkhidmatan utama</h2>
+    <p class="section-intro">Keperluan cetakan dan salinan dokumen anda, dalam satu tempat.</p>
+    <div class="card-grid">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">🖨️</div>
+        <h3>Cetakan dokumen</h3>
+        <p>Perkhidmatan mencetak dokumen untuk tugasan, borang, nota dan kegunaan harian.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">📄</div>
+        <h3>Fotostat dokumen</h3>
+        <p>Salinan dokumen untuk urusan peribadi, pembelajaran dan keperluan pejabat.</p>
+      </article>
+    </div>
+    <p style="margin-top:22px"><a class="button button-outline" href="/perkhidmatan/">Butiran perkhidmatan</a></p>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Mudah dan ringkas</div>
+    <h2 class="section-heading">Cara urusan</h2>
+    <p class="section-intro">Sediakan dokumen anda dan nyatakan jenis cetakan serta jumlah salinan yang diperlukan.</p>
+    <ol class="steps">
+      <li>Sediakan fail atau dokumen asal.</li>
+      <li>Nyatakan jenis dokumen dan jumlah salinan.</li>
+      <li>Semak hasil cetakan anda.</li>
+    </ol>
+    <a class="button button-outline" href="/cara-urusan/">Lihat langkah urusan</a>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Rujukan tahun 2026 / 2027</div>
+    <h2 class="section-heading">Anggaran sebut harga</h2>
+    <p class="section-intro">Julat harga rujukan awal bagi cetakan dan fotostat biasa. Harga akhir tertakluk pada semakan kedai.</p>
+    <div class="price-grid">
+      <article class="price-card"><div class="price-kind">Fotostat · A4</div><h3>Hitam putih</h3><div class="price">RM0.10–0.20</div><p class="small-note">Setiap muka surat · satu muka</p></article>
+      <article class="price-card"><div class="price-kind">Cetakan · A4</div><h3>Hitam putih</h3><div class="price">RM0.10–0.22</div><p class="small-note">Setiap muka surat · satu muka</p></article>
+      <article class="price-card"><div class="price-kind">Cetakan · A4</div><h3>Berwarna</h3><div class="price">RM1.00–1.10</div><p class="small-note">Setiap muka surat · satu muka</p></article>
+      <article class="price-card"><div class="price-kind">Fotostat · A3</div><h3>Hitam putih</h3><div class="price">RM0.20–0.44</div><p class="small-note">Setiap muka surat · satu muka</p></article>
+      <article class="price-card"><div class="price-kind">Cetakan · A3</div><h3>Berwarna</h3><div class="price">RM2.00–2.20</div><p class="small-note">Setiap muka surat · satu muka</p></article>
+    </div>
+    <div class="price-note"><strong>Nota:</strong> Ini ialah anggaran rujukan pasaran 2026/2027, bukan senarai harga rasmi Uziey Family. Kadar sebenar bergantung pada jenis dokumen, liputan warna, kertas, cetakan dua muka dan kuantiti. Sila dapatkan pengesahan kedai sebelum pesanan.</div>
+    <p style="margin-top:20px"><a class="button" href="/tempahan-sebut-harga/">Mohon sebut harga ↗</a></p>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="notice">
+      <h3>⚠️ CASH ONLY – BAYARAN TUNAI SAHAJA</h3>
+      <p><strong>Cashless / QR Code tidak dapat digunakan buat masa ini.</strong> Sila buat pembayaran secara tunai sahaja.</p>
+      <p><strong>AMARAN HACK / PENIPUAN QR CODE:</strong> Jangan imbas QR Code yang tidak disahkan atau buat bayaran ke akaun tidak rasmi. Sila sahkan dengan Uziey Family jika ragu-ragu.</p>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Alamat</h3>
+        <p>Blok A-G13 Rumah Pangsa Rakyat Pajam</p>
+        <p>Jalan Pancaindera 1, 71700 Mantin, Negeri Sembilan</p>
+      </div>
+      <div class="footer-col">
+        <h3>Waktu Operasi</h3>
+        <p>Isnin hingga Sabtu</p>
+        <p>Ahad dan Cuti Umum: Tutup</p>
+      </div>
+      <div class="footer-col">
+        <h3>Hubungi Kami</h3>
+        <p><a href="tel:+601158769834">+6011-58769834</a></p>
+        <p><a href="https://wa.me/601158769834">WhatsApp: +6011-58769834</a></p>
+      </div>
+    </div>
+    <div class="footer-policies">
+      <a href="/privacy-policy/">Dasar Privasi</a> &nbsp; | &nbsp;
+      <a href="/terms-of-service/">Terma Perkhidmatan</a>
+      <p class="copyright">© <span data-current-year>2026</span> Uziey Family. Hak cipta terpelihara.</p>
     </div>
   </div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#utama" aria-label="Uziey Family, halaman utama">
-        <span class="brand-mark">U</span>
-        <span>Kedai Print & Fotostat<small>Uziey Family</small></span>
-      </a>
-      <nav class="navlinks" aria-label="Navigasi utama">
-        <a href="#servis">Perkhidmatan</a>
-        <a href="#cara">Cara urusan</a>
-        <a href="#harga">Sebutharga</a>
-        <a href="#hubungi">Hubungi</a>
-      </nav>
-      <a class="btn" href="#hubungi">Hubungi kami <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="utama">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Print · Fotostat · Dokumen</div>
-          <h1>Dokumen anda,<br><span>kami bantu cetakkan.</span></h1>
-          <p class="hero-copy">Selamat datang ke Kedai Print dan Fotostat Uziey Family. Kami menyediakan perkhidmatan cetakan dan fotostat untuk membantu urusan dokumen harian anda.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#servis">Lihat perkhidmatan <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-outline" href="#hubungi">Maklumat kedai</a>
-          </div>
-          <p class="hero-note">Untuk pertanyaan harga, nyatakan jenis dokumen dan jumlah salinan yang diperlukan.</p>
-        </div>
-        <div class="visual" aria-label="Ilustrasi helaian dokumen bercetak" role="img">
-          <div class="paper-stack">
-            <div class="sheet back"></div>
-            <div class="sheet mid"></div>
-            <div class="sheet front">
-              <div class="sheet-logo">U</div>
-              <div class="sheet-title">UZIEY<br>FAMILY</div>
-              <div class="sheet-sub">PRINT & FOTOSTAT</div>
-              <div class="fake-lines"><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="stamp">CETAKAN<br>ANDA<br>DI SINI</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="servis">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-kicker">Apa yang kami lakukan</div>
-          <h2>Perkhidmatan utama</h2>
-          <p>Keperluan cetakan dan salinan dokumen anda, dalam satu tempat.</p>
-        </div>
-        <div class="services">
-          <article class="service-card">
-            <span class="service-number">01 / PRINT</span>
-            <div class="service-icon" aria-hidden="true">🖨️</div>
-            <h3>Cetakan dokumen</h3>
-            <p>Perkhidmatan mencetak dokumen untuk tugasan, borang, nota dan kegunaan harian.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">02 / COPY</span>
-            <div class="service-icon" aria-hidden="true">📄</div>
-            <h3>Fotostat dokumen</h3>
-            <p>Salinan dokumen untuk urusan peribadi, pembelajaran dan keperluan pejabat.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="pricing" id="harga">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-kicker">Rujukan tahun 2026 / 2027</div>
-          <h2>Anggaran sebut harga</h2>
-          <p>Anggaran kadar bagi cetakan dan fotostat dokumen biasa. Harga akhir tertakluk pada semakan kedai.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="price-label">Fotostat · A4</div>
-            <h3>Hitam putih</h3>
-            <div class="price">RM0.10–0.20</div>
-            <div class="unit">setiap muka surat · satu muka</div>
-          </article>
-          <article class="price-card">
-            <div class="price-label">Cetakan · A4</div>
-            <h3>Hitam putih</h3>
-            <div class="price">RM0.10–0.22</div>
-            <div class="unit">setiap muka surat · satu muka</div>
-          </article>
-          <article class="price-card">
-            <div class="price-label">Cetakan · A4</div>
-            <h3>Berwarna</h3>
-            <div class="price">RM1.00–1.10</div>
-            <div class="unit">setiap muka surat · satu muka</div>
-          </article>
-          <article class="price-card">
-            <div class="price-label">Fotostat · A3</div>
-            <h3>Hitam putih</h3>
-            <div class="price">RM0.20–0.44</div>
-            <div class="unit">setiap muka surat · satu muka</div>
-          </article>
-          <article class="price-card">
-            <div class="price-label">Cetakan · A3</div>
-            <h3>Berwarna</h3>
-            <div class="price">RM2.00–2.20</div>
-            <div class="unit">setiap muka surat · satu muka</div>
-          </article>
-        </div>
-        <div class="price-note">
-          <strong>Nota penting:</strong> Ini ialah anggaran rujukan pasaran 2026/2027, bukan senarai harga rasmi Uziey Family. Kadar sebenar boleh berubah mengikut jenis dokumen, liputan warna, kertas, cetakan dua muka dan jumlah pesanan. Kerja khas atau kuantiti besar perlu dinilai dahulu.
-          <div class="price-sources">Rujukan kadar awam: <a href="https://achikprint4u.com.my/services/photocopy" target="_blank" rel="noopener">Achik Print4U</a>, <a href="https://www.monash.edu.my/its/our-services/staff/printing-services" target="_blank" rel="noopener">Monash University Malaysia</a> dan <a href="https://www.accea.com.my/ms/copy_p/copy_p_color.php" target="_blank" rel="noopener">ACCEA Malaysia</a>.</div>
-        </div>
-        <div class="price-action">
-          <p>Perlukan harga tepat untuk fail atau jumlah cetakan anda?</p>
-          <a class="btn btn-dark" id="whatsapp-price-link" href="https://wa.me/601158769834?text=Salam%20Uziey%20Family%2C%20saya%20ingin%20minta%20sebut%20harga%20untuk%20perkhidmatan%20print%20%2F%20fotostat." target="_blank" rel="noopener">Minta sebut harga melalui WhatsApp ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="band" id="cara">
-      <div class="wrap band-inner">
-        <div>
-          <div class="section-kicker">Mudah & ringkas</div>
-          <h2>Sediakan dokumen anda.</h2>
-          <p>Untuk memudahkan urusan di kedai, sediakan fail atau dokumen asal dan maklumat cetakan yang diperlukan.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><b>LANGKAH 01</b><span>Sediakan fail atau dokumen</span></div>
-          <div class="step"><b>LANGKAH 02</b><span>Nyatakan jenis dan jumlah salinan</span></div>
-          <div class="step"><b>LANGKAH 03</b><span>Semak hasil cetakan anda</span></div>
-        </div>
-      </div>
-    </div>
-
-    <section class="contact" id="hubungi">
-      <div class="wrap contact-grid">
-        <div>
-          <div class="section-kicker">Kami sedia membantu</div>
-          <h2>Ada dokumen untuk dicetak?</h2>
-          <p>Hubungi Kedai Print dan Fotostat Uziey Family untuk pertanyaan tentang perkhidmatan, harga dan urusan dokumen.</p>
-          <div class="contact-cta" id="whatsapp-cta" hidden>
-            <a class="btn" id="whatsapp-link" href="#">WhatsApp kami <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="contact-panel">
-          <h3>Uziey Family</h3>
-          <p>Kedai Print dan Fotostat</p>
-          <div class="contact-details">
-            <div class="detail" id="phone-row"><span class="detail-icon">☎</span><a id="phone-link" href="#"></a></div>
-            <div class="detail" id="address-row"><span class="detail-icon">⌖</span><span id="address-text"></span></div>
-            <div class="detail" id="hours-row"><span class="detail-icon">◷</span><span id="hours-text"></span></div>
-          </div>
-          <p class="setup-hint" id="setup-hint">Maklumat nombor telefon, WhatsApp, alamat dan waktu operasi akan dikemaskini di sini.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <span>© <span id="year"></span> <strong>Kedai Print dan Fotostat Uziey Family</strong></span>
-      <span>Terima kasih kerana menyokong perniagaan tempatan.</span>
-    </div>
-  </footer>
-
-  <script>
-    /*
-      KEMASKINI MAKLUMAT KEDAI DI BAWAH SEBELUM LAMAN DITERBITKAN.
-      WhatsApp: nombor antarabangsa tanpa tanda +, ruang atau sengkang.
-      Contoh format Malaysia: 60123456789 (gantikan dengan nombor sebenar).
-    */
-    const STORE = {
-      whatsapp: "601158769834",
-      phone: "+6011-58769834",
-      address: "Blok A-G13 Rumah Pangsa Rakyat Pajam, Jalan Pancaindera 1, 71700 Mantin",
-      hours: "Isnin hingga Sabtu: 9.00 pagi–6.00 petang · Ahad dan cuti umum: Tutup"
-    };
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const hasWhatsApp = /^\d{8,15}$/.test(STORE.whatsapp);
-    if (hasWhatsApp) {
-      const url = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent("Salam, saya ingin bertanya tentang perkhidmatan print dan fotostat Uziey Family.")}`;
-      document.getElementById("whatsapp-link").href = url;
-      const quoteLink = document.getElementById("whatsapp-price-link");
-      if (quoteLink) quoteLink.href = "https://wa.me/" + STORE.whatsapp + "?text=" + encodeURIComponent("Salam Uziey Family, saya ingin minta sebut harga untuk perkhidmatan print / fotostat.");
-      document.getElementById("whatsapp-cta").hidden = false;
-    }
-
-    if (STORE.phone.trim()) {
-      const phoneLink = document.getElementById("phone-link");
-      phoneLink.textContent = STORE.phone;
-      phoneLink.href = `tel:${STORE.phone.replace(/[^+\d]/g, "")}`;
-      document.getElementById("phone-row").classList.add("show");
-    }
-    if (STORE.address.trim()) {
-      document.getElementById("address-text").textContent = STORE.address;
-      document.getElementById("address-row").classList.add("show");
-    }
-    if (STORE.hours.trim()) {
-      document.getElementById("hours-text").textContent = STORE.hours;
-      document.getElementById("hours-row").classList.add("show");
-    }
-    if (!hasWhatsApp && !STORE.phone.trim() && !STORE.address.trim() && !STORE.hours.trim()) {
-      document.getElementById("setup-hint").classList.add("show");
-    }
-  </script>
+</footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
