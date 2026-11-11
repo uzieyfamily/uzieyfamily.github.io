@@ -109,6 +109,21 @@
     footer { padding: 23px 0; background: #101a2c; color: #9eacc1; font-size: .84rem; }
     .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
     .footer-inner strong { color: white; }
+
+    .pricing { padding: 84px 0; background: #f7f9fc; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .price-card { padding: 25px; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 8px 28px rgba(24,37,58,.04); }
+    .price-card .price-label { color: var(--muted); font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .price-card h3 { margin: 12px 0 8px; color: var(--navy); font-size: 1.12rem; }
+    .price-card .price { color: var(--coral); font-size: 1.75rem; font-weight: 900; letter-spacing: -.04em; line-height: 1.2; }
+    .price-card .unit { margin-top: 6px; color: var(--muted); font-size: .83rem; }
+    .price-note { margin: 26px auto 0; max-width: 850px; padding: 20px 22px; border: 1px solid #f1d9bb; border-radius: 18px; background: #fff8ed; color: #596579; font-size: .91rem; }
+    .price-note strong { color: var(--navy); }
+    .price-sources { margin-top: 11px; font-size: .78rem; }
+    .price-sources a { color: #b95b48; text-decoration: underline; text-underline-offset: 3px; }
+    .price-action { margin-top: 22px; text-align: center; }
+    .price-action p { margin: 0 0 15px; color: var(--muted); }
+
     @media (max-width: 800px) {
       .nav { min-height: 72px; }
       .navlinks { display: none; }
@@ -118,6 +133,7 @@
       .visual { min-height: 330px; }
       .paper-stack { transform: scale(.9); transform-origin: center top; }
       .services { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .band-inner { padding: 30px; }
       .steps { grid-template-columns: 1fr; }
       section { padding: 70px 0; }
@@ -129,6 +145,8 @@
       .topbar-inner { justify-content: center; text-align: center; }
       .topbar-inner span:last-child { display: none; }
       .brand { font-size: .92rem; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card { padding: 22px; }
       .brand-mark { width: 40px; height: 40px; }
       .nav > .btn { padding: 10px 13px; font-size: .82rem; }
       h1 { font-size: 2.55rem; }
@@ -158,6 +176,7 @@
       <nav class="navlinks" aria-label="Navigasi utama">
         <a href="#servis">Perkhidmatan</a>
         <a href="#cara">Cara urusan</a>
+        <a href="#harga">Sebutharga</a>
         <a href="#hubungi">Hubungi</a>
       </nav>
       <a class="btn" href="#hubungi">Hubungi kami <span aria-hidden="true">↗</span></a>
@@ -217,6 +236,57 @@
       </div>
     </section>
 
+
+    <section class="pricing" id="harga">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Rujukan tahun 2026 / 2027</div>
+          <h2>Anggaran sebut harga</h2>
+          <p>Anggaran kadar bagi cetakan dan fotostat dokumen biasa. Harga akhir tertakluk pada semakan kedai.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-label">Fotostat · A4</div>
+            <h3>Hitam putih</h3>
+            <div class="price">RM0.10–0.20</div>
+            <div class="unit">setiap muka surat · satu muka</div>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Cetakan · A4</div>
+            <h3>Hitam putih</h3>
+            <div class="price">RM0.10–0.22</div>
+            <div class="unit">setiap muka surat · satu muka</div>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Cetakan · A4</div>
+            <h3>Berwarna</h3>
+            <div class="price">RM1.00–1.10</div>
+            <div class="unit">setiap muka surat · satu muka</div>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Fotostat · A3</div>
+            <h3>Hitam putih</h3>
+            <div class="price">RM0.20–0.44</div>
+            <div class="unit">setiap muka surat · satu muka</div>
+          </article>
+          <article class="price-card">
+            <div class="price-label">Cetakan · A3</div>
+            <h3>Berwarna</h3>
+            <div class="price">RM2.00–2.20</div>
+            <div class="unit">setiap muka surat · satu muka</div>
+          </article>
+        </div>
+        <div class="price-note">
+          <strong>Nota penting:</strong> Ini ialah anggaran rujukan pasaran 2026/2027, bukan senarai harga rasmi Uziey Family. Kadar sebenar boleh berubah mengikut jenis dokumen, liputan warna, kertas, cetakan dua muka dan jumlah pesanan. Kerja khas atau kuantiti besar perlu dinilai dahulu.
+          <div class="price-sources">Rujukan kadar awam: <a href="https://achikprint4u.com.my/services/photocopy" target="_blank" rel="noopener">Achik Print4U</a>, <a href="https://www.monash.edu.my/its/our-services/staff/printing-services" target="_blank" rel="noopener">Monash University Malaysia</a> dan <a href="https://www.accea.com.my/ms/copy_p/copy_p_color.php" target="_blank" rel="noopener">ACCEA Malaysia</a>.</div>
+        </div>
+        <div class="price-action">
+          <p>Perlukan harga tepat untuk fail atau jumlah cetakan anda?</p>
+          <a class="btn btn-dark" id="whatsapp-price-link" href="https://wa.me/601158769834?text=Salam%20Uziey%20Family%2C%20saya%20ingin%20minta%20sebut%20harga%20untuk%20perkhidmatan%20print%20%2F%20fotostat." target="_blank" rel="noopener">Minta sebut harga melalui WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+
     <div class="band" id="cara">
       <div class="wrap band-inner">
         <div>
@@ -270,7 +340,7 @@
       Contoh format Malaysia: 60123456789 (gantikan dengan nombor sebenar).
     */
     const STORE = {
-      whatsapp: "",
+      whatsapp: "601158769834",
       phone: "+6011-58769834",
       address: "",
       hours: "Isnin hingga Sabtu: 9.00 pagi–6.00 petang · Ahad dan cuti umum: Tutup"
@@ -282,6 +352,8 @@
     if (hasWhatsApp) {
       const url = `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent("Salam, saya ingin bertanya tentang perkhidmatan print dan fotostat Uziey Family.")}`;
       document.getElementById("whatsapp-link").href = url;
+      const quoteLink = document.getElementById("whatsapp-price-link");
+      if (quoteLink) quoteLink.href = url + "?text=" + encodeURIComponent("Salam Uziey Family, saya ingin minta sebut harga untuk perkhidmatan print / fotostat.");
       document.getElementById("whatsapp-cta").hidden = false;
     }
 
