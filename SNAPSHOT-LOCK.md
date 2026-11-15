@@ -27,3 +27,12 @@ Untuk melindungi laman aktif, sasarkan juga branch `main` dan aktifkan Require a
 Branch ini diwujudkan sebelum pop-up CASH ONLY dan QR Code ditambah. Ia merupakan salinan rujukan berasingan daripada branch `main`.
 
 Status perlindungan GitHub: branch protection masih perlu diaktifkan melalui GitHub Settings → Branches / Rulesets. Semakan semasa sebelum ini menunjukkan `protected: false`; catatan ini tidak bermaksud GitHub telah menguatkuasakan lock.
+
+
+## Snapshot sebelum World Watch (15 November 2026)
+
+- Branch: `snapshot/2026-11-15-before-world-dashboard`
+- Commit asas: `7634309a7b5e0975cfc8d7f6c39668849131122b`
+- URL: https://github.com/uzieyfamily/uzieyfamily.github.io/tree/snapshot/2026-11-15-before-world-dashboard
+
+Branch ini mengekalkan keadaan repositori sebelum halaman World Watch dan kemas kini navigasi awam dibuat. Snapshot telah diwujudkan, tetapi status branch protection GitHub belum disahkan sebagai aktif. Jangan anggap snapshot dikunci daripada pemadaman atau force-push sehingga peraturan perlindungan diaktifkan melalui GitHub Settings → Branches / Rulesets.
