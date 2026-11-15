@@ -61,3 +61,6 @@ Nota: capaian feed pihak ketiga boleh bergantung pada CORS, rangkaian, dan keter
 - Menambah hub pautan solo.to Jay Freddy: https://solo.to/jayfreddy.
 - Menyusun semula bahagian sokongan dalam tiga kad responsif dengan penerangan ringkas dan butang tindakan yang lebih jelas.
 - Mengekalkan pautan profil GitHub dan bintang repositori sebagai pilihan sokongan komuniti tambahan.
+
+- Menambah butang khas **Support Creator** di sebelah **Hubungi** pada navigasi desktop World Watch, serta pautan yang sepadan dalam menu mudah alih.
+- Menyerlahkan butang menggunakan warna aksen cyan, bentuk pill, keadaan hover dan fokus papan kekunci; pautan menuju terus ke bahagian sokongan pencipta.
