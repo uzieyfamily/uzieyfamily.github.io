@@ -33,3 +33,19 @@ Fail utama: [index.html](index.html), [assets/site.css](assets/site.css), [asset
 - Mengekalkan notis statik pada halaman utama dan footer sebagai peringatan tambahan.
 - Memperjelas pautan Dasar Privasi (Privacy Policy) dan Terma Perkhidmatan (Terms of Service) pada footer.
 - Menyimpan versi sebelum perubahan pada branch `snapshot/2026-11-11-before-cash-only-popup`.
+
+
+## 15 November 2026 — World Watch public dashboard
+
+- Menambah halaman awam `/world-watch/` untuk jam dunia, zon waktu, amaran bencana dan peta ancaman siber.
+- Menambah jam digital Kuala Lumpur serta dua jam analog: pergerakan arah jam dan lawan arah jam dengan susunan dail songsang.
+- Menambah jam digital untuk beberapa bandar dunia menggunakan pangkalan zon waktu IANA pada pelayar.
+- Menambah feed gempa bumi USGS 24 jam dengan pautan GeoJSON dan peta rasmi.
+- Menambah semakan feed tsunami NOAA PTWC dan NTWC serta pautan ke tsunami.gov.
+- Menambah semakan notis gunung berapi USGS / GDACS jika feed tersedia.
+- Menambah pautan / panel peta Check Point, Kaspersky dan FortiGuard dengan pautan terus sebagai fallback jika iframe disekat.
+- Menambah pautan sokongan pencipta ke profil GitHub dan repositori.
+- Menambah pautan World Watch pada menu desktop dan mudah alih halaman awam serta butang akses pada homepage.
+- Menyimpan keadaan asal sebelum perubahan pada branch `snapshot/2026-11-15-before-world-dashboard`.
+
+Nota: capaian feed pihak ketiga boleh bergantung pada CORS, rangkaian, dan ketersediaan pembekal. Dashboard bukan sumber arahan kecemasan.
