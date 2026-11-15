@@ -49,3 +49,24 @@ Versi sebelum penyelarasan WordPress disimpan pada branch:
 `snapshot/2026-11-11-before-wordpress-sync`
 
 Rujuk [SNAPSHOT-LOCK.md](SNAPSHOT-LOCK.md) untuk butiran snapshot dan status perlindungan branch.
+
+
+## World Watch — papan pemuka awam
+
+Halaman tambahan **World Watch** boleh dibuka tanpa akaun atau log masuk:
+- URL: https://uzieyfamily.github.io/world-watch/
+- Jam digital dan analog zon waktu Kuala Lumpur.
+- Jam analog standard serta jam analog songsang (lawan arah jam).
+- Zon waktu bandar antarabangsa.
+- Feed gempa bumi USGS (24 jam).
+- Suapan amaran tsunami NOAA PTWC dan NTWC dengan pautan rasmi.
+- Notis gunung berapi daripada USGS / GDACS apabila feed boleh dicapai.
+- Peta ancaman siber Check Point, Kaspersky dan FortiGuard.
+- Pautan sokongan pencipta: profil GitHub dan bintang repositori.
+
+Feed data disegarkan setiap lima minit dan menyediakan butang segar semula manual. Akses feed tertakluk kepada ketersediaan penyedia dan polisi CORS pelayar; pautan rasmi disediakan sebagai fallback. Halaman ini bukan sistem amaran kecemasan rasmi. Maklumat tsunami tidak meliputi semua pusat amaran dunia. Ikut arahan pihak berkuasa tempatan.
+
+Sumber peta ancaman siber:
+- https://threatmap.checkpoint.com/
+- https://cybermap.kaspersky.com/
+- https://fortiguard.fortinet.com/threat-map/
