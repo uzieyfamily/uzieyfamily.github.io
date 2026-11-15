@@ -49,3 +49,7 @@ Fail utama: [index.html](index.html), [assets/site.css](assets/site.css), [asset
 - Menyimpan keadaan asal sebelum perubahan pada branch `snapshot/2026-11-15-before-world-dashboard`.
 
 Nota: capaian feed pihak ketiga boleh bergantung pada CORS, rangkaian, dan ketersediaan pembekal. Dashboard bukan sumber arahan kecemasan.
+
+- Menambah pautan rujukan MET Malaysia, myGempa dan myTide untuk konteks amaran serta pemantauan tempatan Malaysia.
+- Menambah GDACS API sebagai sumber tambahan kejadian tsunami global.
+- Membetulkan pembacaan medan `volcano_name`, `alert_level`, `sent_utc` dan `notice_url` daripada API notis gunung berapi USGS.
