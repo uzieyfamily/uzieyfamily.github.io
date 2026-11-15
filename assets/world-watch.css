@@ -132,3 +132,22 @@
 @media(max-width:800px){.ww-support-cards{grid-template-columns:1fr 1fr}.ww-support-card:last-child{grid-column:1/-1}}
 @media(max-width:560px){.ww-support-intro{text-align:left;margin-bottom:19px}.ww-support-intro p{margin:0}.ww-support-cards{grid-template-columns:1fr}.ww-support-card:last-child{grid-column:auto}.ww-support-card{padding:19px}.ww-support-card p{min-height:0}.ww-support-footer{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.ww-support-card{transition:none}.ww-support-card:hover{transform:none}}
+
+/* Dedicated Support Creator navigation action */
+.world-watch-page .desktop-nav a.nav-support,
+.world-watch-page .mobile-nav a.nav-support{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;border:1px solid #54d8e8;border-radius:999px;
+  background:linear-gradient(135deg,#54d8e8,#9cf1df);
+  color:#071521!important;font-weight:900;letter-spacing:.005em;
+  box-shadow:0 5px 18px #54d8e833;text-decoration:none;
+}
+.world-watch-page .desktop-nav a.nav-support:hover,
+.world-watch-page .mobile-nav a.nav-support:hover{
+  filter:brightness(1.08);box-shadow:0 7px 22px #54d8e855;text-decoration:none;
+}
+.world-watch-page .desktop-nav a.nav-support:focus-visible,
+.world-watch-page .mobile-nav a.nav-support:focus-visible{
+  outline:3px solid #fff;outline-offset:3px;
+}
+.world-watch-page .mobile-nav a.nav-support{width:100%;margin-top:3px}
