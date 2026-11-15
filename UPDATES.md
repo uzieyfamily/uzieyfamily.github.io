@@ -53,3 +53,11 @@ Nota: capaian feed pihak ketiga boleh bergantung pada CORS, rangkaian, dan keter
 - Menambah pautan rujukan MET Malaysia, myGempa dan myTide untuk konteks amaran serta pemantauan tempatan Malaysia.
 - Menambah GDACS API sebagai sumber tambahan kejadian tsunami global.
 - Membetulkan pembacaan medan `volcano_name`, `alert_level`, `sent_utc` dan `notice_url` daripada API notis gunung berapi USGS.
+
+## 15 November 2026 — Kemas kini Support Creator
+
+- Menambah pautan SociaBuzz Jay Freddy: https://sociabuzz.com/jayfreddy.
+- Menambah pautan Ko-fi Jay Freddy: https://ko-fi.com/jayfreddy.
+- Menambah hub pautan solo.to Jay Freddy: https://solo.to/jayfreddy.
+- Menyusun semula bahagian sokongan dalam tiga kad responsif dengan penerangan ringkas dan butang tindakan yang lebih jelas.
+- Mengekalkan pautan profil GitHub dan bintang repositori sebagai pilihan sokongan komuniti tambahan.
