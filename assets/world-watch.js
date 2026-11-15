@@ -168,14 +168,26 @@
     try {
       const feeds = await Promise.allSettled([
         getXML("https://www.tsunami.gov/events/xml/PHEBAtom.xml"),
-        getXML("https://www.tsunami.gov/events/xml/PAAQAtom.xml")
+        getXML("https://www.tsunami.gov/events/xml/PAAQAtom.xml"),
+        getJSON("https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventlist=TS")
       ]);
       const entries = [];
       const errors = [];
       feeds.forEach((result, index) => {
-        const label = index === 0 ? "PTWC" : "NTWC";
+        const label = ["PTWC", "NTWC", "GDACS"][index];
         if (result.status === "fulfilled") {
-          xmlEntries(result.value).forEach((item) => entries.push({ ...item, source: label }));
+          if (index < 2) {
+            xmlEntries(result.value).forEach((item) => entries.push({ ...item, source: label }));
+          } else {
+            flattenRecords(result.value).forEach((record) => {
+              const title = pick(record, ["name", "title", "eventname", "eventName", "event_name"]) || "Amaran tsunami global";
+              const country = pick(record, ["country", "countryname", "countryName", "fromcountry", "fromCountry"]);
+              const level = pick(record, ["alertlevel", "alertLevel", "alert_level", "alert"]); 
+              const updated = pick(record, ["todate", "datetime", "updated", "fromdate", "fromDate"]);
+              const href = pick(record, ["url", "htmlurl", "htmlUrl", "eventurl", "eventUrl", "link"]);
+              entries.push({ title: title + (country ? " · " + country : ""), updated, href, summary: level ? "Tahap " + level : "", source: label });
+            });
+          }
         } else {
           errors.push(label);
         }
