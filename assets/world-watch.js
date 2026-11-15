@@ -237,7 +237,7 @@
     if (status) status.textContent = "Menyemak USGS dan GDACS…";
     const urls = [
       { name: "USGS", url: "https://volcanoes.usgs.gov/hans-public/api/volcano/getElevatedVolcanoes" },
-      { name: "GDACS", url: "https://www.gdacs.org/contentdata/xml/gdacsVO.geojson" }
+      { name: "GDACS", url: "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventlist=VO" }
     ];
     const results = await Promise.allSettled(urls.map((item) => getJSON(item.url)));
     const visible = [];
@@ -255,10 +255,10 @@
       if (visible.length) {
         visible.slice(0, 7).forEach(({ record, source }) => {
           const name = pick(record, ["volcanoName", "volcano_name", "name", "volcano", "eventname", "eventName"]);
-          const level = pick(record, ["alertLevel", "alert_level", "alertlevel", "level", "status", "alert"]);
-          const updated = pick(record, ["updated", "alertDate", "alert_date", "date", "fromdate", "fromDate", "datetime"]);
-          const link = pick(record, ["url", "link", "href", "eventurl", "eventUrl"]);
-          const summary = (level ? String(level) + " · " : "") + source + (updated ? " · " + safeText(updated) : "");
+          const level = pick(record, ["alertLevel", "alert_level", "alertlevel", "level", "status", "alert", "color_code"]);
+          const updated = pick(record, ["sent_utc", "sentUtc", "todate", "updated", "alertDate", "alert_date", "date", "fromdate", "fromDate", "datetime"]);
+          const link = pick(record, ["notice_url", "noticeUrl", "url", "link", "href", "eventurl", "eventUrl", "htmlurl", "htmlUrl"]);
+          const summary = (level ? String(level) + " · " : "") + source + (updated ? " · " + safeText(updated) + (source === "USGS" ? " UTC" : "") : "");
           list.appendChild(eventItem(name || "Notis gunung berapi", summary, link, source));
         });
       } else if (failures.length === 2) {
