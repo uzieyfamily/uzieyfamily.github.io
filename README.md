@@ -73,3 +73,5 @@ Sumber peta ancaman siber:
 
 - Rujukan tempatan tambahan untuk gempa bumi/tsunami Malaysia: MET Malaysia, myGempa dan myTide (aras laut semasa/pemantauan tsunami).
 - Feed GDACS global ditambah sebagai sumber tambahan kejadian tsunami; suapan NOAA kekal khusus kepada kawasan PTWC dan NTWC.
+
+- Sokongan pencipta Jay Freddy: https://sociabuzz.com/jayfreddy, https://ko-fi.com/jayfreddy dan https://solo.to/jayfreddy.
