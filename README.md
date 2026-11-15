@@ -70,3 +70,6 @@ Sumber peta ancaman siber:
 - https://threatmap.checkpoint.com/
 - https://cybermap.kaspersky.com/
 - https://fortiguard.fortinet.com/threat-map/
+
+- Rujukan tempatan tambahan untuk gempa bumi/tsunami Malaysia: MET Malaysia, myGempa dan myTide (aras laut semasa/pemantauan tsunami).
+- Feed GDACS global ditambah sebagai sumber tambahan kejadian tsunami; suapan NOAA kekal khusus kepada kawasan PTWC dan NTWC.
