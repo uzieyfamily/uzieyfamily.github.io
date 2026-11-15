@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Papan pemuka awam jam dunia, masa digital dan analog lawan arah jam, amaran bencana serta peta ancaman siber secara langsung.">
+  <meta name="robots" content="index,follow">
+  <title>World Watch — Jam Dunia, Amaran Bencana & Peta Ancaman</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/world-watch.css">
+</head>
+<body class="world-watch-page">
+<a class="skip-link" href="#kandungan">Langkau ke kandungan utama</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Uziey Family — Utama">
+      <span class="brand-mark">U</span>
+      <span><span class="brand-name">Uziey Family</span><span class="brand-subtitle">Public World Watch</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navigasi utama">
+      <a href="/">Utama</a>
+      <a href="/perkhidmatan/">Perkhidmatan</a>
+      <a href="/world-watch/" aria-current="page">World Watch</a>
+      <a href="/hubungi/">Hubungi</a>
+    </nav>
+    <details class="mobile-menu">
+      <summary>Menu ☰</summary>
+      <nav class="mobile-nav" aria-label="Navigasi mudah alih">
+        <a href="/">Utama</a><a href="/perkhidmatan/">Perkhidmatan</a>
+        <a href="/world-watch/" aria-current="page">World Watch</a><a href="/hubungi/">Hubungi</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="kandungan" class="ww-main">
+  <div class="ww-container">
+    <section class="ww-hero">
+      <div class="ww-eyebrow"><span class="live-dot"></span> Papan pemuka awam · Akses tanpa log masuk</div>
+      <h1>World <span>Watch</span></h1>
+      <p class="ww-lead">Jam dunia, pemantauan bencana dan peta ancaman siber dari sumber terbuka serta penyedia rasmi.</p>
+      <div class="ww-meta">
+        <span><span class="status-dot"></span> Data dikemas kini secara automatik apabila sumber tersedia</span>
+        <span>Lokasi masa utama: Kuala Lumpur · MYT (UTC+8)</span>
+      </div>
+    </section>
+
+    <section class="ww-section" id="jam-dunia">
+      <div class="ww-section-heading">
+        <div><div class="ww-kicker">Masa antarabangsa</div><h2>Jam dunia & zon waktu</h2></div>
+        <p>Jam digital dan analog diselaraskan kepada masa semasa peranti.</p>
+      </div>
+      <div class="ww-clock-summary">
+        <div class="ww-digital-panel">
+          <div class="ww-label">KUALA LUMPUR · MALAYSIA</div>
+          <div class="ww-digital-time" id="digital-time" aria-live="off">--:--:--</div>
+          <div class="ww-digital-date" id="digital-date">Memuatkan tarikh…</div>
+          <div class="ww-timezone-badge">Asia/Kuala_Lumpur · MYT / UTC+8</div>
+        </div>
+        <div class="ww-clock-pair">
+          <article class="ww-clock-card">
+            <div class="ww-clock-title">Analog · arah jam</div>
+            <div class="ww-clock-face" data-clock="clockwise" role="img" aria-label="Jam analog Kuala Lumpur bergerak mengikut arah jam">
+              <div class="ww-clock-ticks" aria-hidden="true"></div><div class="ww-clock-numbers" aria-hidden="true"></div>
+              <span class="ww-hand ww-hour"></span><span class="ww-hand ww-minute"></span><span class="ww-hand ww-second"></span><span class="ww-clock-pin"></span>
+            </div>
+            <div class="ww-clock-caption">Pergerakan biasa</div>
+          </article>
+          <article class="ww-clock-card">
+            <div class="ww-clock-title">Analog · lawan arah jam</div>
+            <div class="ww-clock-face ww-counter-face" data-clock="counterclockwise" role="img" aria-label="Jam analog Kuala Lumpur bergerak melawan arah jam dengan nombor dail disusun terbalik">
+              <div class="ww-clock-ticks" aria-hidden="true"></div><div class="ww-clock-numbers" aria-hidden="true"></div>
+              <span class="ww-hand ww-hour"></span><span class="ww-hand ww-minute"></span><span class="ww-hand ww-second"></span><span class="ww-clock-pin"></span>
+            </div>
+            <div class="ww-clock-caption">Dail songsang · jarum bergerak lawan arah jam</div>
+          </article>
+        </div>
+      </div>
+      <div class="ww-timezone-heading"><h3>Waktu di beberapa bandar dunia</h3><span>Jam digital · 24 jam</span></div>
+      <div class="ww-timezone-grid" id="timezone-grid">
+        <div class="ww-zone-card">Memuatkan zon waktu…</div>
+      </div>
+      <p class="ww-small-note">Masa menggunakan pangkalan zon waktu pelayar (IANA/Intl). Perbezaan waktu musim panas dikira oleh pelayar secara automatik.</p>
+    </section>
+
+    <section class="ww-section" id="amaran-bencana">
+      <div class="ww-section-heading">
+        <div><div class="ww-kicker">Pemantauan bumi</div><h2>Amaran & aktiviti bencana</h2></div>
+        <p>Data terkini daripada sumber yang dinyatakan; skop dan kelengkapan berbeza mengikut agensi.</p>
+      </div>
+      <div class="ww-hazard-grid">
+        <article class="ww-panel">
+          <div class="ww-panel-head"><div class="ww-hazard-icon">🌎</div><div><h3>Gempa bumi</h3><span>USGS · 24 jam terkini</span></div></div>
+          <div class="ww-stat-row"><strong id="quake-count">—</strong><span>kejadian direkodkan dalam feed</span></div>
+          <div id="quake-list" class="ww-event-list" aria-live="polite"><p class="ww-muted">Sedang mengambil data USGS…</p></div>
+          <div class="ww-source-row"><a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson" target="_blank" rel="noopener noreferrer">Feed GeoJSON USGS ↗</a><a href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank" rel="noopener noreferrer">Peta rasmi ↗</a></div>
+        </article>
+
+        <article class="ww-panel">
+          <div class="ww-panel-head"><div class="ww-hazard-icon">🌊</div><div><h3>Tsunami</h3><span>NOAA · pusat amaran Amerika Syarikat</span></div></div>
+          <div class="ww-feed-status" id="tsunami-status">Menyemak suapan amaran NOAA…</div>
+          <div id="tsunami-list" class="ww-event-list"><p class="ww-muted">Membaca buletin PTWC dan NTWC…</p></div>
+          <div class="ww-source-row"><a href="https://www.tsunami.gov/" target="_blank" rel="noopener noreferrer">Pusat Amaran Tsunami NOAA ↗</a><a href="https://www.tsunami.gov/events/xml/PHEBAtom.xml" target="_blank" rel="noopener noreferrer">Feed PTWC ↗</a><a href="https://www.tsunami.gov/events/xml/PAAQAtom.xml" target="_blank" rel="noopener noreferrer">Feed NTWC ↗</a></div>
+          <p class="ww-small-note">PTWC menyediakan maklumat untuk kawasan Pasifik dan Caribbean tertentu; NTWC meliputi Amerika Syarikat, Alaska dan Kanada. Ini bukan senarai lengkap semua pusat amaran dunia.</p>
+        </article>
+
+        <article class="ww-panel">
+          <div class="ww-panel-head"><div class="ww-hazard-icon">🌋</div><div><h3>Gunung berapi</h3><span>USGS & GDACS · status meningkat</span></div></div>
+          <div class="ww-feed-status" id="volcano-status">Menyemak notis gunung berapi…</div>
+          <div id="volcano-list" class="ww-event-list"><p class="ww-muted">Mengambil notis gunung berapi…</p></div>
+          <div class="ww-source-row"><a href="https://volcanoes.usgs.gov/hans2/" target="_blank" rel="noopener noreferrer">Notis gunung berapi USGS ↗</a><a href="https://www.gdacs.org/" target="_blank" rel="noopener noreferrer">Peta risiko GDACS ↗</a></div>
+          <p class="ww-small-note">USGS memantau gunung berapi di Amerika Syarikat; GDACS menyediakan maklumat bencana antarabangsa apabila kejadian memenuhi kriteria sistemnya.</p>
+        </article>
+      </div>
+      <div class="ww-refresh-row"><span id="data-updated">Data belum dikemas kini.</span><button type="button" id="refresh-data" class="ww-button ww-button-quiet">↻ Segar semula data</button></div>
+    </section>
+
+    <section class="ww-section" id="ancaman-siber">
+      <div class="ww-section-heading">
+        <div><div class="ww-kicker">Keselamatan digital</div><h2>Peta dunia ancaman siber</h2></div>
+        <p>Visualisasi ancaman daripada penyedia pihak ketiga. Data, definisi dan sela kemas kini dikawal oleh setiap penyedia.</p>
+      </div>
+      <div class="ww-map-grid">
+        <article class="ww-map-card">
+          <div class="ww-map-heading"><div><h3>Check Point ThreatCloud</h3><p>Live Cyber Threat Map</p></div><span class="ww-provider-tag">CHECK POINT</span></div>
+          <div class="ww-map-frame"><iframe src="https://threatmap.checkpoint.com/" title="Check Point live cyber threat map" loading="lazy" referrerpolicy="no-referrer" allow="fullscreen"></iframe></div>
+          <div class="ww-map-actions"><a href="https://threatmap.checkpoint.com/" target="_blank" rel="noopener noreferrer">Buka peta rasmi ↗</a><span>Jika paparan terbenam disekat oleh penyedia, gunakan pautan rasmi.</span></div>
+        </article>
+        <article class="ww-map-card">
+          <div class="ww-map-heading"><div><h3>Kaspersky Cybermap</h3><p>Cyberthreat Live Map · widget rasmi</p></div><span class="ww-provider-tag">KASPERSKY</span></div>
+          <div class="ww-map-frame"><iframe src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" title="Kaspersky Cyberthreat Live Map" loading="lazy" referrerpolicy="no-referrer" allow="fullscreen"></iframe></div>
+          <div class="ww-map-actions"><a href="https://cybermap.kaspersky.com/" target="_blank" rel="noopener noreferrer">Buka peta rasmi ↗</a><span>Widget dinamik rasmi Kaspersky.</span></div>
+        </article>
+        <article class="ww-map-card">
+          <div class="ww-map-heading"><div><h3>FortiGuard Threat Map</h3><p>Fortinet Global Threat Activity</p></div><span class="ww-provider-tag">FORTINET</span></div>
+          <div class="ww-map-frame"><iframe src="https://fortiguard.fortinet.com/threat-map" title="FortiGuard Fortinet threat map" loading="lazy" referrerpolicy="no-referrer" allow="fullscreen"></iframe></div>
+          <div class="ww-map-actions"><a href="https://fortiguard.fortinet.com/threat-map" target="_blank" rel="noopener noreferrer">Buka peta rasmi ↗</a><span>Jika laman tidak membenarkan iframe, buka secara berasingan.</span></div>
+        </article>
+      </div>
+      <p class="ww-disclaimer">Peta ini memaparkan aktiviti yang dikesan oleh rangkaian dan sistem vendor masing-masing. Ia bukan gambaran menyeluruh semua serangan siber di dunia, bukan pengesahan bahawa peranti anda sedang diserang, dan bukan pengganti pemantauan keselamatan organisasi.</p>
+    </section>
+
+    <section class="ww-section ww-support" id="sokong-pencipta">
+      <div><div class="ww-kicker">Sokongan komuniti</div><h2>Sokong pencipta</h2><p>Anda boleh menyokong pembangunan laman awam ini dengan mengikuti profil pembangun atau memberikan bintang kepada repositori GitHub.</p></div>
+      <div class="ww-support-links">
+        <a class="ww-button" href="https://github.com/uzieyfamily" target="_blank" rel="noopener noreferrer">Ikuti pencipta di GitHub ↗</a>
+        <a class="ww-button ww-button-outline" href="https://github.com/uzieyfamily/uzieyfamily.github.io" target="_blank" rel="noopener noreferrer">Beri bintang pada projek ↗</a>
+      </div>
+      <p class="ww-small-note ww-support-note">Pautan sumbangan wang seperti Ko-fi, Buy Me a Coffee atau PayPal belum disediakan kerana URL khusus pencipta belum diberikan.</p>
+    </section>
+
+    <section class="ww-section ww-sources">
+      <div class="ww-kicker">Ketelusan data</div><h2>Sumber & penafian</h2>
+      <div class="ww-source-grid">
+        <div><strong>Gempa bumi</strong><a href="https://www.usgs.gov/programs/earthquake-hazards" target="_blank" rel="noopener noreferrer">U.S. Geological Survey (USGS)</a></div>
+        <div><strong>Tsunami</strong><a href="https://www.tsunami.gov/" target="_blank" rel="noopener noreferrer">NOAA / U.S. Tsunami Warning System</a></div>
+        <div><strong>Gunung berapi</strong><a href="https://volcanoes.usgs.gov/hans2/" target="_blank" rel="noopener noreferrer">USGS Volcano Notification System</a></div>
+        <div><strong>Bencana global</strong><a href="https://www.gdacs.org/" target="_blank" rel="noopener noreferrer">Global Disaster Awareness and Coordination System (GDACS)</a></div>
+        <div><strong>Peta ancaman siber</strong><a href="https://threatmap.checkpoint.com/" target="_blank" rel="noopener noreferrer">Check Point</a> · <a href="https://cybermap.kaspersky.com/" target="_blank" rel="noopener noreferrer">Kaspersky</a> · <a href="https://fortiguard.fortinet.com/threat-map" target="_blank" rel="noopener noreferrer">Fortinet</a></div>
+      </div>
+      <p class="ww-disclaimer">Halaman ini ialah papan pemuka maklumat awam, bukan sistem amaran kecemasan rasmi. Data mungkin lewat, tidak lengkap, tidak tersedia atau disekat oleh pelayar/penyedia. Jangan membuat keputusan keselamatan atau pemindahan berdasarkan laman ini sahaja. Ikut arahan pihak berkuasa tempatan dan pusat amaran rasmi.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer ww-footer">
+  <div class="ww-container">
+    <div class="ww-footer-inner">
+      <div><strong>World Watch</strong><p>Papan pemuka awam oleh Uziey Family.</p></div>
+      <div><a href="/">Laman utama</a><a href="/privacy-policy/">Dasar Privasi</a><a href="/terms-of-service/">Terma Perkhidmatan</a><a href="#sokong-pencipta">Sokong pencipta</a></div>
+    </div>
+    <p class="copyright">© <span data-current-year>2026</span> Uziey Family. Data ancaman dan amaran kekal milik penyedia masing-masing.</p>
+  </div>
+</footer>
+<script src="/assets/world-watch.js" defer></script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
